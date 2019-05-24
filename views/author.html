@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>{{.Author}}_{{.SiteName}}</title>
+
+
+    <link rel="stylesheet" href=//{{.Domain}}/static/css/index.css>
+
+
+</head>
+
+<body>
+<div style="margin: 20px auto; text-align: center; margin-bottom: 0px;">
+    <h1>{{.Author}}</h1>
+    {{if eq .AuthorNum 0}}
+    <p>暂无数据</p>
+    {{end}}
+
+    {{range .Author_page}}
+    <p><a href=//{{$.Domain}}/page/{{.ID}} target="_blank">{{.Post_title}}</a></p>
+    {{end}}
+
+ 
+</div>
+<div class="sibling-fade">
+    {{range .Tags}}
+        <a href=//{{$.Domain}}/tag/{{.}}>{{.}}</a>
+    {{end}}
+
+</div>
+<script src=https://hm.baidu.com/hm.js?c9fb86fd91b49d15cc6f0f2edf693ade></script>
+
+</body>
+</html>

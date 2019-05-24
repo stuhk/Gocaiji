@@ -1,0 +1,5 @@
+{
+  "Sql_str":"root:root@tcp(127.0.0.1:3306)/caiji?charset=utf8",
+  "Max_connections":200,
+  "Port":"80"
+}

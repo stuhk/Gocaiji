@@ -1,0 +1,218 @@
+body {
+    background:url(../images/bg.jpg) repeat;
+	-webkit-font-smoothing: antialiased;
+}
+.desc {
+   
+    font-size: 14px;
+    color: #666666;
+
+}
+/* 悬浮样式div */
+.title {
+    text-align: center;
+    font-family: arial;
+    font-size: 33px;
+    background: #fff;
+    border: 2px solid #ddd;
+    /* 边框solid实心 */
+    padding: 10px 15px;
+    /* 内边距 */
+    box-shadow: 2px 3px 2px rgb(219, 216, 216);
+    /* 属性向框添加一个或多个阴影 */
+    -moz-box-shadow: 2px 3px 2px rgb(219, 216, 216);
+    /* 火狐 */
+    -webkit-box-shadow: 2px 3px 2px rgb(219, 216, 216);
+    /* 谷歌 */
+    position: relative;
+    /* 定位方式 */
+    z-index: 1;
+    /* 图层 数值越高越在上面 */
+
+    border-radius: 11px;
+}
+
+.content,
+.comment {
+    background: #fff;
+    border: 2px solid #ddd;
+    /* 边框solid实心 */
+    padding: 10px 15px;
+    /* 内边距 */
+    box-shadow: 2px 3px 2px rgb(219, 216, 216);
+    /* 属性向框添加一个或多个阴影 */
+    -moz-box-shadow: 2px 3px 2px rgb(219, 216, 216);
+    /* 火狐 */
+    -webkit-box-shadow: 2px 3px 2px rgb(219, 216, 216);
+    /* 谷歌 */
+    position: relative;
+    /* 定位方式 */
+    z-index: 1;
+    /* 图层 数值越高越在上面 */
+
+    /*边框圆角化*/
+    border-radius: 10px;
+
+    /*防止文字越界*/
+  
+
+
+}
+p{text-indent:2em}
+pre {     
+    padding: 10px 10px 10px 40px;     
+    font-size: 13px;     
+    line-height: 18px;     
+    background-color: #eee;     
+    font-family: "Lucida Console", Consolas, Monaco;     
+    white-space: pre-wrap;     
+    word-break: break-all;     
+    position: relative;     
+    overflow: hidden; }  
+
+.contenttext{
+    line-height:30px;
+}
+
+
+/* 居中的一个盒子 */
+@media screen and (max-width:600px) {
+.box {
+    
+    word-break: break-all;
+}
+}
+
+@media screen and (min-width:600px){
+.box {
+    margin-left: 20%;
+    margin-right: 20%;
+    word-break: break-all;
+}
+}
+
+
+/*相关文章*/
+
+div {
+    display: block;
+}
+
+ol,
+ul,
+li {
+    list-style: none outside none;
+}
+
+.article-pager{
+    background: #f3f3f3;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 4px 10px;
+}
+
+.article-pager ul {
+    margin: 0px;
+    padding: 6px 0;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.article-pager ul li {
+    float: left;
+    line-height: 24px;
+}
+
+.article-pager .previous a,
+.article-pager .next a {
+    float: left;
+    display: inline-block;
+    width: 400px;
+    height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.article-pager span {
+    float: left;
+}
+
+.article-pager .next {
+    float: right;
+}
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #3399ff;
+    text-decoration: underline
+}
+
+
+
+/*标签*/
+.tag a { display: inline-block; height: 23px; line-height: 21px; color: #666666; padding: 0 10px; border: 1px solid #e2e2e2; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; margin-right: 6px; font-family: "微软雅黑"; text-decoration: none; }
+
+.entry-meta {
+    background: #ebe3e3;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 4px 10px;
+    text-align:center;
+    font-size: 18px;
+    font-weight:bold;
+ 
+}
+
+
+/*评论卡片*/
+.comment .username{
+    color: #6a7780;
+
+}
+
+
+dt,dd{ display:inline; } 
+dt { font-weight: bold; } 
+dd{float:right;}
+td{padding-bottom:20px;}
+.commentform{padding-bottom: 20px;}
+.commentsubmit{float:right;}
+
+
+/**评论**/
+.post-area { border-radius: 2px; border: #ccc 1px solid; margin-bottom: 10px; background: #fff; position: relative }
+.post-area-txt { position: absolute; top: 50%; width: 100%; text-align: center; font-size: 24px; color: #e6e6e6; z-index: 1 }
+.holiday { background:none; float: left; height: 32px; position: absolute; right: -1px; top: -1px; width: 124px; z-index: 999; }
+.comment-editor, #smileys { float: left; height: 32px; line-height: 32px; border-bottom: #d8d8d8 1px solid; border-radius: 4px 4px 0 0; background-color: #fdfdfd; overflow: hidden; width: 100% }
+.comment-editor a { color: #777; display: inline-block; padding: 0 8px; height: 32px; border-right: 1px dotted #ddd; text-decoration: none }
+.comment-editor a:hover { color: #333; background-color: #FFF }
+#smileys { display: none; position: absolute; top: 0; left: 48px; width: 100%; }
+#smileys.smileys-con { width: auto }
+#smileys a { margin: 8px 5px 0 0; display: inline-block; line-height: 0 }
+
+
+.btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c }
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success { color: #fff; background-color: #449d44; border-color: #398439 }
+.btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success { background-image: none }
+.btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success[disabled].active, fieldset[disabled] .btn-success.active { background-color: #5cb85c; border-color: #4cae4c }
+.btn-success .badge { color: #5cb85c; background-color: #fff }
+.btn { display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px }
+.btn:focus, .btn:active:focus, .btn.active:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px }
+.btn:hover, .btn:focus { color: #333; text-decoration: none }
+.btn:active, .btn.active { background-image: none; outline: 0; -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125); box-shadow: inset 0 3px 5px rgba(0,0,0,.125) }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn { pointer-events: none; cursor: not-allowed; filter: alpha(opacity=65); -webkit-box-shadow: none; box-shadow: none; opacity: .65 }
+
+
+.nameinput {
+    width: 268px;
+    height: 23px;
+    line-height: 23px;
+    padding: 2px;
+ 
+}

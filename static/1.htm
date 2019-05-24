@@ -1,0 +1,227 @@
+<html><head>
+
+<style>
+.show-content { color: rgb(47, 47, 47); font-size: 16px; font-weight: 400; line-height: 1.7; word-break: break-word !important; }
+.show-content p { margin: 0px 0px 25px; }
+.show-content blockquote h1:last-child, .show-content blockquote h2:last-child, .show-content blockquote h3:last-child, .show-content blockquote h4:last-child, .show-content blockquote h5:last-child, .show-content blockquote h6:last-child, .show-content blockquote li:last-child, .show-content blockquote ol:last-child, .show-content blockquote p:last-child, .show-content blockquote ul:last-child { margin-bottom: 0px; }
+.show-content .video-package .video-description p { margin: 0px; }
+.show-content li p { overflow: visible; }
+.show-content a { color: rgb(49, 148, 208); }
+.show-content a:hover { color: rgb(49, 148, 208); text-decoration: underline; }
+.show-content a.active, .show-content a:active, .show-content a:focus { color: rgb(49, 148, 208); }
+.show-content a.disabled, .show-content a.disabled.active, .show-content a.disabled:active, .show-content a.disabled:focus, .show-content a.disabled:hover, .show-content a[disabled], .show-content a[disabled].active, .show-content a[disabled]:active, .show-content a[disabled]:focus, .show-content a[disabled]:hover { cursor: not-allowed; color: rgb(245, 245, 245); }
+.show-content ol, .show-content p, .show-content ul { word-break: break-word !important; }
+.show-content hr { margin: 0px 0px 20px; border-top: 1px solid rgb(221, 221, 221); }
+.show-content h1, .show-content h2, .show-content h3, .show-content h4, .show-content h5, .show-content h6 { margin: 0px 0px 15px; font-weight: 700; color: rgb(47, 47, 47); line-height: 1.7; text-rendering: optimizeLegibility; }
+.show-content h1 { font-size: 26px; }
+.show-content h2 { font-size: 24px; }
+.show-content h3 { font-size: 22px; }
+.show-content h4 { font-size: 20px; }
+.show-content h5 { font-size: 18px; }
+.show-content h6 { font-size: 16px; }
+.show-content img { max-width: 100%; }
+.show-content blockquote { padding: 20px; margin-bottom: 25px; background-color: rgb(247, 247, 247); border-left: 6px solid rgb(180, 180, 180); font-size: 16px; font-weight: 400; line-height: 30px; word-break: break-word !important; }
+.show-content blockquote p { font-size: 16px; font-weight: 400; line-height: 1.7; }
+.show-content blockquote .image-package { width: auto; margin-left: 0px; }
+.show-content ol, .show-content ul { padding: 0px; margin: -5px 0px 20px 20px; }
+.show-content ol li, .show-content ul li { line-height: 30px; }
+.show-content ol li ol, .show-content ol li ul, .show-content ul li ol, .show-content ul li ul { margin-top: 15px; }
+.show-content ol .image-package, .show-content ul .image-package { width: auto !important; margin-left: 0px !important; }
+.show-content pre { margin-bottom: 20px; padding: 15px; font-size: 13px; word-wrap: normal; white-space: pre; overflow: auto; border-radius: 4px; word-break: break-word !important; }
+.show-content pre code { padding: 0px; background-color: transparent; white-space: pre; }
+.show-content code { padding: 2px 4px; background-color: rgb(246, 246, 246); border: none; font-size: 12px; white-space: pre-wrap; vertical-align: middle; }
+.show-content table { width: 100%; margin-bottom: 20px; border-top: 1px solid rgb(221, 221, 221); border-right: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221, 221); border-image: initial; border-collapse: collapse; border-left: none; word-break: normal; }
+.show-content table tr:nth-of-type(2n) { background-color: rgba(181, 181, 181, 0.098); }
+.show-content table thead th { vertical-align: middle; text-align: inherit; }
+.show-content table td, .show-content table th { padding: 8px; border: 1px solid rgb(221, 221, 221); line-height: 20px; vertical-align: middle; }
+.show-content table th { font-weight: 700; }
+.show-content table .image-package { width: auto; margin-left: 0px; }
+.show-content .image-package .image-container { z-index: 100; position: relative; background-color: rgb(238, 238, 238); transition: background-color 0.1s linear; margin: 0px auto; }
+.show-content .image-package .image-container .image-container-fill { z-index: 50; }
+.show-content .image-package .image-container .image-view { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; }
+.show-content .image-package .image-container .image-view img.image-loading { filter: blur(4px); opacity: 0.3; }
+.show-content .image-package .image-container .image-view img { display: block; transition: all 0.15s linear; z-index: 100; filter: blur(0px); opacity: 1; }
+.show-content .image-package { padding-bottom: 25px; width: 700px; margin-left: -40px; text-align: center; }
+.show-content .image-package img { max-width: 100%; height: auto; vertical-align: middle; border: 0px; cursor: -webkit-zoom-in; transition: all 0.25s ease-in-out; }
+.show-content .image-package .image-caption { min-width: 20%; max-width: 80%; min-height: 22px; display: inline-block; padding: 10px; margin: 0px auto; border-bottom: 1px solid rgb(217, 217, 217); font-size: 14px; color: rgb(150, 150, 150); line-height: 1.7; }
+.show-content .image-package .image-caption:empty { display: none; }
+.show-content .video-package { position: relative; margin: -20px auto 20px; text-align: center; }
+.show-content .video-package .video-placeholder-area { position: relative; display: inline-block; height: 110px; padding: 10px 10px 10px 120px; box-sizing: border-box; border: 1px solid rgb(217, 217, 217); background-color: rgba(181, 181, 181, 0.098); text-align: left; cursor: pointer; }
+.show-content .video-package .video-placeholder-area::after { content: " "; position: absolute; top: -1px; left: -1px; display: block; width: 110px; height: 110px; background-color: rgba(0, 0, 0, 0.3); background-image: url("//cdn2.jianshu.io/assets/common/play-btn-c4bc06b9dfe063495b6b8277b14bc5c3.png"); background-position: 30px center; background-size: 50px; background-repeat: no-repeat; transition: all 0.1s linear; }
+.show-content .video-package .video-placeholder-area:hover::after { background-color: transparent; }
+.show-content .video-package .video-placeholder-area .video-cover { position: absolute; top: -1px; left: -1px; display: block; width: 110px; height: 110px; opacity: 0.8; transition: opacity 0.1s linear; }
+.show-content .video-package .video-description { min-width: 20%; min-height: 22px; display: none; padding: 10px; margin: 0px auto; border-bottom: 1px solid rgb(217, 217, 217); font-size: 13px; color: rgb(153, 153, 153); line-height: 1.7; }
+.show-content .video-package .video-description:empty { display: none; }
+.show-content .video-package .video-close-button, .show-content .video-package .video-provider-button { text-align: left; font-size: 14px; padding: 0px; line-height: 14px; cursor: pointer; transition: opacity 0.1s linear; }
+.show-content .video-package .video-close-button i, .show-content .video-package .video-provider-button i { position: relative; top: 1px; }
+.show-content .video-package .video-provider-button { float: right; }
+.hljs { display: block; overflow-x: auto; padding: 0.5em; color: rgb(171, 178, 191); background: rgb(40, 44, 52); }
+.hljs-doctag, .hljs-formula, .hljs-keyword { color: rgb(198, 120, 221); }
+.hljs-literal { color: rgb(86, 182, 194); }
+.hljs-addition, .hljs-attribute, .hljs-meta-string, .hljs-regexp, .hljs-string { color: rgb(152, 195, 121); }
+.hljs-built_in, .hljs-class .hljs-title { color: rgb(230, 192, 123); }
+.hljs-attr, .hljs-number, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-pseudo, .hljs-template-variable, .hljs-type, .hljs-variable { color: rgb(209, 154, 102); }
+.hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-symbol, .hljs-title { color: rgb(97, 174, 238); }
+.image-package .image-container { position: relative; z-index: 2; background-color: rgb(238, 238, 238); transition: background-color 0.1s linear; margin: 0px auto; }
+body.reader-night-mode .image-package .image-container { background-color: rgb(84, 84, 84); }
+.image-package .image-container-fill { z-index: 1; }
+.image-package .image-container .image-view { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; }
+.image-package .image-container .image-view-error::after { content: "图片获取失败，请点击重试"; position: absolute; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); color: rgb(136, 136, 136); font-size: 14px; }
+.image-package .image-container .image-view img.image-loading { opacity: 0.3; }
+.image-package .image-container .image-view img { transition: all 0.15s linear; z-index: 2; opacity: 1; }
+object, embed { animation-duration: 0.001s; animation-name: playerInserted; }
+</style>
+</head>
+<body>
+
+
+<div data-note-content="" class="show-content">
+          <div class="show-content-free">
+            <h3>安装go</h3>
+<p>巧妇难为无米之炊，第一步当然是先在服务器安装go喽，</p>
+<pre class="hljs bash"><code class="bash">先下载压缩包
+wget [https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz](https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz)
+再解压
+tar -zxvf go1.8.linux-amd64.tar.gz -C /usr/<span class="hljs-built_in">local</span>
+然后配置环境
+sudo vim /etc/profile
+环境里面加入路径
+<span class="hljs-built_in">export</span> GOROOT=/usr/<span class="hljs-built_in">local</span>/go   //这里是你安装go的路径哦
+<span class="hljs-built_in">export</span> GOPATH=/home/ubuntu/webgo
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$GOROOT</span>/bin:<span class="hljs-variable">$PATH</span>
+试一试安装成功没
+go version
+</code></pre>
+<h3>试试http请求</h3>
+<p>我使用FileZilla将本地的一个main.go文件拖到服务器。</p>
+<pre class="hljs java"><code class="java"><span class="hljs-function"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-title">import</span> <span class="hljs-params">(
+    <span class="hljs-string">"net/http"</span>
+    <span class="hljs-string">"fmt"</span>
+)</span>
+
+func <span class="hljs-title">handler</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span>  </span>{
+    fmt.Fprintf(w, <span class="hljs-string">"hello, http"</span>)
+}
+
+<span class="hljs-function">func <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    http.HandleFunc(<span class="hljs-string">"/"</span>,handler)
+    http.ListenAndServe(<span class="hljs-string">"0.0.0.0:80"</span>,nil)
+}
+</code></pre>
+<p>然后输入自己的域名<a href="http://www.ljbniubi.top" target="_blank" rel="nofollow">http://www.ljbniubi.top</a>，就可以看到<code>hello, http</code><br>
+这里有一个坑，就是平时我们监听的端口都是8080，但现在不一样了，是通过服务器访问。我记得我以前docker部署的时候是<code>-p 80:8080</code>标志打开HTTP端口80并将其映射至前面通过EXPOSE命令暴露的8080端口。<br>
+HTTP服务器，默认的端口号为80/tcp）；<br>
+HTTPS（securely transferring web pages）服务器，默认的端口号为443/tcp 443/udp；----所以下面要监听https的话要443端口哦</p>
+<h3>https部署</h3>
+<p>先在腾讯云SSL证书管理，有1年的免费使用。腾讯有详细的每步教程，这边就不说了，文档写的确实不错（有大厂风范啊~）。<br>
+申请完毕后如下：</p>
+<br>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 405px; background-color: transparent;">
+<div class="image-container-fill" style="padding-bottom: 33.36%;"></div>
+<div class="image-view" data-width="1214" data-height="405"><img data-original-src="//upload-images.jianshu.io/upload_images/2868618-60d8c9306e23f4bb.png" data-original-width="1214" data-original-height="405" data-original-format="image/png" data-original-filesize="155541" class="" style="cursor: zoom-in;" src="//upload-images.jianshu.io/upload_images/2868618-60d8c9306e23f4bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp"></div>
+</div>
+<div class="image-caption">image.png</div>
+</div><br>
+<p>下载后如下：我们使用的是Nginx下的2个文件，一个是密钥，一个是数字证书。简单介绍一下吧，里面的知识点太多，网上也很多。</p>
+<br>
+<div class="image-package">
+<div class="image-container" style="max-width: 647px; max-height: 160px; background-color: transparent;">
+<div class="image-container-fill" style="padding-bottom: 24.73%;"></div>
+<div class="image-view" data-width="647" data-height="160"><img data-original-src="//upload-images.jianshu.io/upload_images/2868618-081f4f38de0ecb7f.png" data-original-width="647" data-original-height="160" data-original-format="image/png" data-original-filesize="37717" class="" style="cursor: zoom-in;" src="//upload-images.jianshu.io/upload_images/2868618-081f4f38de0ecb7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/647/format/webp"></div>
+</div>
+<div class="image-caption">image.png</div>
+</div><br>
+HTTPS的数据传输是加密的。实际使用中，HTTPS利用的是对称与非对称加密算法结合的方式。<br>
+对称加密，就是通信双方使用一个密钥，该密钥既用于数据加密（发送方），也用于数据解密（接收方）。<br>
+非对称加密，使用两个密钥。发送方使用公钥（公开密钥）对数据进行加密，数据接收方使用私钥对数据进行解密。<br>
+<p>实际操作中，单纯使用对称加密或单纯使用非对称加密都会存在一些问题，比如对称加密的密钥管理复杂；非对称加密的处理性能低、资源占用高等，因 此HTTPS结合了这两种方式。<br>
+HTTPS服务端在连接建立过程（ssl shaking握手协议）中，会将自身的公钥发送给客户端。客户端拿到公钥后，与服务端协商数据传输通道的对称加密密钥-对话密钥，随后的这个协商过程则 是基于非对称加密的（因为这时客户端已经拿到了公钥，而服务端有私钥）。一旦双方协商出对话密钥，则后续的数据通讯就会一直使用基于该对话密 钥的对称加密算法了。<br>
+上述过程有一个问题，那就是双方握手过程中，如何保障HTTPS服务端发送给客户端的公钥信息没有被篡改呢？实际应用中，HTTPS并非直接传输公钥信息，而是使用携带公钥信息的数字证书来保证公钥的安全性和完整性。<br>
+数字证书，又称互联网上的"身份证"，用于唯一标识一个组织或一个服务器的，这就好比我们日常生活中使用的"居民身份证"，用于唯一标识一个 人。服务端将数字证书传输给客户端，客户端如何校验这个证书的真伪呢？网站的证书也是同样的道理。一般来说数字证书从受信的权威证书授权机构 (Certification Authority，证书授权机构)买来的（免费的很少）。一般浏览器在出厂时就内置了诸多知名CA（如Verisign、GoDaddy、美国国防部、 CNNIC等）的数字证书校验方法，只要是这些CA机构颁发的证书，浏览器都能校验。对于CA未知的证书，浏览器则会报错。主流浏览器都有证书管理功能，但鉴于这些功能比较高级，一般用户是不用去关心的。<br>
+好了，接下来将2个文件拷贝很main.go拷贝在一起</p>
+<br>
+<div class="image-package">
+<div class="image-container" style="max-width: 700px; max-height: 212px; background-color: transparent;">
+<div class="image-container-fill" style="padding-bottom: 27.250000000000004%;"></div>
+<div class="image-view" data-width="778" data-height="212"><img data-original-src="//upload-images.jianshu.io/upload_images/2868618-642dd22cbb943017.png" data-original-width="778" data-original-height="212" data-original-format="image/png" data-original-filesize="70166" class="" style="cursor: zoom-in;" src="//upload-images.jianshu.io/upload_images/2868618-642dd22cbb943017.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/778/format/webp"></div>
+</div>
+<div class="image-caption">image.png</div>
+</div><br>
+修改main.go
+<pre class="hljs cpp"><code class="cpp"><span class="hljs-function">package main
+
+<span class="hljs-title">import</span> <span class="hljs-params">(
+    <span class="hljs-string">"net/http"</span>
+    <span class="hljs-string">"fmt"</span>
+    <span class="hljs-string">"crypto/tls"</span>
+)</span>
+
+func <span class="hljs-title">handler</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span>  </span>{
+    fmt.Fprintf(w, <span class="hljs-string">"hello, https"</span>)
+}
+
+<span class="hljs-function">func <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    server := http.NewServeMux()
+    server.HandleFunc(<span class="hljs-string">"/"</span>,handler)
+    cfg := &amp;tls.Config{
+        MinVersion: tls.VersionTLS12,
+        CurvePreferences: []tls.CurveID{tls.CurveP521, tls.CurveP384, tls.CurveP256},
+        PreferServerCipherSuites:<span class="hljs-literal">true</span>,
+        CipherSuites: []uint16{
+            tls.TLS_RSA_WITH_AES_256_CBC_SHA,
+            tls.TLS_RSA_WITH_AES_256_GCM_SHA384,
+            tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
+            tls.TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+        },
+    }
+    srv := &amp;http.Server{
+        Addr: <span class="hljs-string">"0.0.0.0:443"</span>,
+        Handler: server,
+        TLSConfig:cfg,
+        TLSNextProto: make(<span class="hljs-built_in">map</span>[<span class="hljs-built_in">string</span>]func(*http.Server, *tls.Conn, http.Handler), <span class="hljs-number">0</span>),
+    }
+    srv.ListenAndServeTLS(<span class="hljs-string">"1_www.ljbniubi.top_bundle.crt"</span>, <span class="hljs-string">"2_www.ljbniubi.top.key"</span>)
+}
+</code></pre>
+<p>其实上面一大堆config不写也可以的，直接：</p>
+<pre class="hljs java"><code class="java"><span class="hljs-function"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-title">import</span> <span class="hljs-params">(
+    <span class="hljs-string">"net/http"</span>
+    <span class="hljs-string">"fmt"</span>
+)</span>
+
+func <span class="hljs-title">handler</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span>  </span>{
+    fmt.Fprintf(w, <span class="hljs-string">"hello, https"</span>)
+}
+
+<span class="hljs-function">func <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    http.HandleFunc(<span class="hljs-string">"/"</span>,handler)
+    http.ListenAndServeTLS(<span class="hljs-string">":443"</span>,<span class="hljs-string">"1_www.ljbniubi.top_bundle.crt"</span>,<span class="hljs-string">"2_www.ljbniubi.top.key"</span>, nil)
+}
+</code></pre>
+<p>这个时候访问<a href="https://www.ljbniubi.top" target="_blank" rel="nofollow">https://www.ljbniubi.top</a> 就会出现<code>hello, https</code></p>
+<h3>后台保持运行</h3>
+<p>由于go run main.go 关闭端口的时候就会取消。所以使用</p>
+<pre class="hljs undefined"><code>go build ./main.go
+会生成一个main的运行文件
+nohup ./main &amp;
+后台运行main文件
+killall -9 main
+你可能还要关闭main
+</code></pre>
+<h3>总结</h3>
+<p>好像没什么好总结的~</p>
+<p>参考资料：<br>
+<a href="https://blog.csdn.net/bhlice/article/details/79127716" target="_blank" rel="nofollow">ubuntu 16.04 安装go 1.8 步骤</a><br>
+<a href="https://blog.csdn.net/u014421556/article/details/51671353" target="_blank" rel="nofollow">http、https 等 常用默认端口号</a><br>
+<a href="https://tonybai.com/2015/04/30/go-and-https/" target="_blank" rel="nofollow">Go和HTTPS</a></p>
+
+          </div>
+        </div>
+		
+		
+		

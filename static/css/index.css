@@ -1,0 +1,65 @@
+/* SIBLING FADE: fade out siblings around a hovered item */
+
+.sibling-fade { visibility: hidden; }
+/* Prevents :hover from triggering in the gaps between items */
+
+.sibling-fade > * { visibility: visible; }
+/* Brings the child items back in, even though the parent is `hidden` */
+
+.sibling-fade > * { -webkit-transition: opacity 150ms linear 100ms, -webkit-transform 150ms ease-in-out 100ms; transition: opacity 150ms linear 100ms, -webkit-transform 150ms ease-in-out 100ms; transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms; transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms, -webkit-transform 150ms ease-in-out 100ms; }
+/* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
+
+.sibling-fade:hover > * { opacity: 0.4; -webkit-transform: scale(0.9); transform: scale(0.9); }
+/* Fade out all items when the parent is hovered */
+
+.sibling-fade > *:hover { opacity: 1; -webkit-transform: scale(1); transform: scale(1); -webkit-transition-delay: 0ms, 0ms; transition-delay: 0ms, 0ms; }
+/* Fade in the currently hovered item */
+
+
+
+a {
+  color: #665353;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color: #3399ff;
+  text-decoration: underline
+}
+
+
+
+
+/* Presentational Styles */
+html { display: -webkit-box; display: -ms-flexbox; display: flex; height: 100%; }
+body { 
+  background: #f05555;
+  padding: 10px;
+  max-width: 40em;
+  margin: auto;
+}
+
+.sibling-fade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sibling-fade > * {
+  background: white;
+  padding: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  margin: 0.3em;
+  text-align: center;
+  color: #f05555;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/**/

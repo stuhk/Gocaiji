@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>{{.SiteName}} - 科技改造机器!</title>
+
+
+    <link rel="stylesheet" href=//{{.Domain}}/static/css/index.css>
+
+
+</head>
+
+<body>
+<div style="margin: 20px auto; text-align: center; margin-bottom: 0px;">
+    <a href=//{{.Domain}} target="_blank"><img src=//{{.Domain}}/static/images/index.png alt="菜鸡网"></a>
+</div>
+<div class="sibling-fade">
+    {{range .Tags}}
+        <a href=//{{$.Domain}}/tag/{{.}}>{{.}}</a>
+    {{end}}
+
+</div>
+
+<script src=https://hm.baidu.com/hm.js?c9fb86fd91b49d15cc6f0f2edf693ade></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{.Post_title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href=//{{.Domain}}/static/css/main.css />
+    
+    <style>
+        {{.CssFile}}
+    </style>
+   
+</head>
+
+<body>
+
+  <div class="box">
+    <div class="title">
+        {{.Post_title}}  
+
+        <div class="desc">
+         <span>浏览量:{{.Look_count}}  发布日期:</span> 
+         <span>{{.Post_date}}  作者:</span> 
+          <a href=//{{.Domain}}/author/{{.Post_author}} target="_blank">{{.Post_author}}</a> 
+        </div>
+    
+         
+    </div>
+  
+    <div class="content">
+            <div class="contenttext">
+            {{.Post_content}}
+        </div>
+            <div class="article-pager">
+                    <ul>
+                        <li class="previous">
+                            <span>随机文章：</span><a target="_blank" href=//{{.Domain}}/page/{{.RandPage1.ID}}>{{.RandPage1.Post_title}}</a>
+                        </li>
+                        <li class="next">
+                            <span>推荐阅读：</span><a target="_blank" href=//{{.Domain}}/page/{{.RandPage2.ID}}>{{.RandPage2.Post_title}}</a>
+                        </li>
+                    </ul>
+                    
+            </div>
+
+
+
+            <div class="entry-meta">
+                    {{if eq .TagNum 0}}
+                    <span class="tag">><a>暂无数据</a><span>
+                    {{end}}
+                     {{range .Tags}}
+                <span class="tag"><a target="_blank" href=//{{$.Domain}}/tag/{{.}}>{{.}}</a> </span>
+                 {{end}}
+            </div>
+
+    </div>
+   
+    <div class="comment">
+
+            <form action="/index" method="post" class="commentform">
+                <div id="test" class="post-area">
+                    <div class="holiday"></div>
+                        <div class="comment-editor">
+                            <a id="comment-smiley" href="javascript:;">表情</a><a href="javascript:;" id="imageThumb">插图</a>
+                        </div>
+                       
+                        <textarea name="comment" id="comment" cols="100%" rows="7" style="overflow-x:hidden; overflow-y:hidden; border:0; width:99%;" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('submit').click();return false};"></textarea>
+                        <div id="loading" style="display: none;"><img src=//{{.Domain}}/static/images/wpspin_light.gif style="vertical-align:middle;" alt=""> 正在提交, 请稍候...</div><div id="error" style="display: none;">#</div>
+                </div>
+
+
+                <p>
+                    <label>昵称</label>
+                    <input type="text" name="author" size="14" class="nameinput" aria-required="true" placeholder="请输入昵称">
+                    <input class="btn btn-success commentsubmit" type="submit" name="submit" value="提交评论">
+                  </p>
+                             
+        
+                        
+                          </form>
+
+        <table  width="100%" rules=rows  frame=hsides > 
+            <tbody>
+                    {{range $i, $v := .Comments}}
+                   
+                <tr > 
+                    <td> 
+                        <dl> 
+                            <dt> 
+                                <span class="username"> <a target="_blank" href=//{{$.Domain}}/author/{{.Comment_author}}>{{$v.Comment_author }}</a> </span> 
+                               
+                            </dt> 
+                            <dd> 
+                                <span> {{$v.Comment_date }}</span> 
+                                <a href="javascript:void(0);" >引用</a> 
+                                <a href="javascript:void(0);"> 举报</a> 
+                                <span>{{$i}}楼</span> 
+                            </dd> 
+                            </dl> 
+                        <div>
+                             {{$v.Comment_content }}
+                        </div> 
+                    </td> 
+                </tr> 
+                {{end}}
+            
+            </tbody> 
+        </table>
+
+    </div>
+  </div>
+ 
+    <script src=https://hm.baidu.com/hm.js?c9fb86fd91b49d15cc6f0f2edf693ade></script>
+</body>
+
+</html>
